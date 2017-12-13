@@ -1,0 +1,12 @@
+docker login KeithContainerRegistry.azurecr.io -u KeithContainerRegistry -p MNU9XIx4KbKWDwS37repzDeSJMZdRC/9
+
+docker tag chzbrgr71/smackapi KeithContainerRegistry.azurecr.io/chzbrgr71/smackapi
+
+docker tag chzbrgr71/smackweb KeithContainerRegistry.azurecr.io/chzbrgr71/smackweb
+
+docker push KeithContainerRegistry.azurecr.io/chzbrgr71/smackapi
+
+docker push KeithContainerRegistry.azurecr.io/chzbrgr71/smackweb
+
+
+az acr list --resource-group Keith-Registry --output table

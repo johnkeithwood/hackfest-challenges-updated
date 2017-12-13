@@ -1,0 +1,20 @@
+Detailed steps for Challenge 1:
+
+Open Ubuntu. SSH to jump server. Install Azure CLI if not already done. 
+ssh kwood@13.65.87.55 -i myPrivateKey_rsa
+old: ssh kwood@40.121.54.101 -i myPrivateKey_rsa
+
+To get keys from the remote server, use:
+pscp -i myPrivateKey_rsa.ppk kwood@13.65.87.55:.ssh/*.* tempssh
+
+1. az login --service-principal -u b20a510b-9e90-48d2-9298-3d731680e982 --password 14n6BEKbqnqqrC6cdyW+pitVDERnc2mb4qxGmoQLEdg= --tenant 414efc33-68fe-4520-802f-aea4401192d0
+
+2. az aks install-CLI
+
+3. az aks get-credentials --name jkwk8satl --resource-group odl_kwoodaks
+
+workaround: scp kwood-acs@jk8sakwtlmgmt.westcentralus.cloudapp.azure.com:.kube/config $HOME/.kube/config
+
+4. kubectl version
+
+5. az aks browse -g odl_kwoodaks -n jkwk8satl

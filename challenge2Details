@@ -1,0 +1,10 @@
+kubectl create -f ./pod.yaml
+
+
+on a machine with a ui (run all steps to install azure cli and kubectl:
+
+kubectl port-forward my-pod 8081:8080
+
+kubectl create -f ./service.yaml
+
+kubectl create -f ./myhealthyapp.yaml

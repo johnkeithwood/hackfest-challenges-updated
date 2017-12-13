@@ -1,0 +1,4 @@
+kubectl run service1 --image=evillgenius/kuar:1 --port=8080 --expose=true
+
+kubectl run service2 --image=evillgenius/kuar:1 --port=8080 --expose=true
+
